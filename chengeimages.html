@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change images(onchange events)</title>
+</head>
+
+<body>
+    <h1 style="text-align:center;">Change images using onchange Events</h1>
+    <div style="text-align:center">
+        <select id="select-image" onclick="changeImage()">
+            <option value="" src="">select images</option>
+            <option value="image1" id="1" src="1.jpeg"> 1</option>
+            <option value=" image2" id="2" src="2.jpeg"> 2</option>
+            <option value="image3" id="3" src="3.jpeg"> 3</option>
+            <option value="image4" id="4" src="4.jpeg"> 4</option>
+        </select>
+        <div class="text-center">
+            <img src="1.jpeg" class="rounded" id="image">
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let img1 = document.getElementById('1').src
+    let img2 = document.getElementById('2').src
+    let img3 = document.getElementById('3').src
+    let img4 = document.getElementById('4').src
+    function changeImage() {
+        let image = document.getElementById("select-image")
+        if (image.id = 1) {
+            document.getElementById('image').innerHTML = img1
+        }
+        if (image.id = 2) {
+            document.getElementById('image').innerHTML = img2
+        }
+        if (image.id = 3) {
+            document.getElementById('image').innerHTML = img3
+        }
+        if (image.id = 4) {
+            document.getElementById('image').innerHTML = img4
+        } else {
+            console.log("Please select again.....")
+        }
+    }
+</script>

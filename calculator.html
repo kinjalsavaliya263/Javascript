@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            padding: 0%;
+            margin: 0%;
+            /* background: linear-gradient(to right, #3a83a7bf, #6aff00af); */
+        }
+
+        .calculator-grid {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            min-height: 100vh;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: minmax(120px, auto) repeat(4, 100px);
+        }
+
+        .calculator-grid>button {
+            cursor: pointer;
+            font-size: 2rem;
+            border: 1px solid snow;
+            outline: none;
+            background-color: rgb(139, 188, 197);
+
+        }
+
+        .calculator-grid>button:hover {
+            background-color: aliceblue;
+        }
+
+        .span-2 {
+            grid-column: span 2;
+        }
+
+        .out-put {
+            grid-column: 1/-1;
+            background-color: rgba(0, 0, 0, 0.628);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            flex-direction: column;
+            padding: 10px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .out-put .previous-operand {
+            color: rgb(205, 213, 221);
+            font-size: 1.5rem;
+        }
+
+        .out-put .current-operand {
+            color: whitesmoke;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator-grid">
+        <div class="out-put">
+            <div class="previous-operand">125</div>
+            <div class="current-operand">456</div>
+        </div>
+        <button class="span-2">AC</button>
+        <button>DEL</button>
+        <button>÷</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>×</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>+</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>-</button>
+        <button>.</button>
+        <button>0</button>
+        <button class="span-2">=</button>
+    </div>
+</body>
+
+</html>
